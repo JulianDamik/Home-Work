@@ -47,13 +47,12 @@ public class Dragon {
 	public void baseHealth(int hlth){
 		health = hlth;
 	}
-	public void healthUp(int hlth){
-		health = health + hlth;
-	}
-	public void healthDown(int hlth){
-		health = health - hlth;
-	}
-	public void addAge(int ag){
-		age = age + ag;
+	public void print(){
+		System.out.println("Wings: " + wings);
+		System.out.println("Color: " + color);
+		System.out.println("Type: " + type);
+		System.out.println("Health: " + health);
+		System.out.println("Age: " + age);
+		System.out.println();
 	}
 }
