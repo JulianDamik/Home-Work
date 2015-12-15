@@ -4,8 +4,18 @@ public class Student extends Person {
 	private double GPA;
 	private int IDNum;
 	private String schoolName;
-	private String favClass;
 	
+	public Student(String fN, String lN, int a, double w, double gpa, int ID, String school){
+		super(fN, lN, a, w);
+		setGPA(gpa);
+		setIDNum(ID);
+		setSchool(school);
+	}
+	public Student(){
+		GPA = 4.0;
+		IDNum = 0;
+		schoolName = " ";
+	}
 	public void setGPA(double gpa){
 		GPA = gpa;
 	}
@@ -15,7 +25,16 @@ public class Student extends Person {
 	public void setSchool(String school){
 		schoolName = school;
 	}
-	public void setFavClass(String fav){
-		favClass = fav;
+	public double getGPA(){
+		return GPA;
+	}
+	public int getIDNum(){
+		return IDNum;
+	}
+	public String getSchool(){
+		return schoolName;
+	}
+	public String toString(){
+		return "Name: " + getFName() + " " + getLName() + "\nAge: " + getAge() + "\nWeight: " + getWeight() + "\nGPA: " + GPA + "\nID Number: " + IDNum + "\nSchool: " + schoolName + "\n";
 	}
 }
