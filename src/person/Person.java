@@ -43,8 +43,9 @@ public class Person {
 	public double getWeight(){
 		return weight;
 	}
+	@Override
 	public String toString(){
-		return "Name: " + fName + " " + lName + "\nAge: " + age + "\nWeight: " + weight + "\n";
+		return "Name: " + fName + " " + lName + "\nAge: " + age + "\nWeight: " + weight;
 	}
 }
 	
