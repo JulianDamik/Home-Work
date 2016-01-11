@@ -1,5 +1,9 @@
+import java.io.*;
+
 public class MultiTable {
    public static void main(String[] args){
+	   
+	   PrintStream ps = new PrintStream(System.out);
 
       int [][] multiTable = new int [13][13];
    
@@ -11,9 +15,9 @@ public class MultiTable {
    
       for(int row = 1; row < 13; row++){
          for(int col = 1; col < 13; col++){
-         System.out.print(multiTable[row][col] + "\t");
-         }
-         System.out.println();
+        	 ps.print(multiTable[row][col] + "\t");
+         	}
+         	System.out.println();
       }
     }   
 }
