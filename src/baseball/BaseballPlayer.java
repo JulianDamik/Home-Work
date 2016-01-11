@@ -15,7 +15,7 @@ public class BaseballPlayer {
    public int fixPlayerList(ArrayList<String> baseballPlayers) {
 	   int removed = 0;
 	   for(int i = 0; i < baseballPlayers.size(); i++){
-    	  for(int j = baseballPlayers.size()-1; j >= 0; j--){
+    	  for(int j = baseballPlayers.size()-1; j >= i+1; j--){
     		  if(baseballPlayers.get(i).equals(baseballPlayers.get(j))){
     			  baseballPlayers.remove(j);
     			  j--;
@@ -23,6 +23,6 @@ public class BaseballPlayer {
     		  }
     	  }
       }
-	 return removed;
+	   		return removed;
    }
 }
