@@ -1,4 +1,3 @@
-
 /**
  * Card.java
  *
@@ -33,8 +32,9 @@ public class Card {
 	 *                  containing the point value of the card
 	 */
 	public Card(String cardRank, String cardSuit, int cardPointValue) {
+		//initializes a new Card with the given rank, suit, and point value
 		rank = cardRank;
-		suit = cardSuit;
+		suit = cardSuit;                                                                                                                         //Assign Suit
 		pointValue = cardPointValue;
 	}
 
@@ -45,7 +45,7 @@ public class Card {
 	 */
 	public String suit() {
 		return suit;
-   }
+	}
 
 	/**
 	 * Accesses this <code>Card's</code> rank.
@@ -70,12 +70,9 @@ public class Card {
 	 *         false otherwise.
 	 */
 	public boolean matches(Card otherCard) {
-		if(this.rank.equals(otherCard.rank) && this.suit.equals(otherCard.suit)){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return otherCard.suit().equals(this.suit())
+			&& otherCard.rank().equals(this.rank())
+			&& otherCard.pointValue() == this.pointValue(); //
 	}
 
 	/**
@@ -90,6 +87,6 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-		return this.rank() + " of " + this.suit() + "(Point value = " + this.pointValue + ")"; 
+		return rank + " of " + suit + " (point value = " + pointValue + ")";//
 	}
 }
